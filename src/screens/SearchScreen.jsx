@@ -30,8 +30,8 @@ const SearchScreen = ({navigation}) => {
           numColumns={2}
           ListHeaderComponent={
             <View style={styles.InputHeaderContainer}>
-        <InputHeader SearchFunction={searchMovieFunction} />
-      </View>
+              <InputHeader SearchFunction={searchMovieFunction} />
+            </View>
           }
           contentContainerStyle={styles.centerContainer}
           renderItem={({item, index}) => (
@@ -41,9 +41,7 @@ const SearchScreen = ({navigation}) => {
               cardFunction={() => {
                 navigation.push('MovieDetails', {movieid: item.id});
               }}
-              cardWidth={width / 2 - SPACING.space_12*2}
-              // isFirst={index === 0 ? true : false}
-              // isLast={index === searchList?.length - 1 ? true : false}
+              cardWidth={width / 2 - SPACING.space_12 * 2}
               title={item.original_title}
               imagePath={BaseIamgepath('w342', item.poster_path)}
             />
@@ -64,12 +62,12 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.Black,
   },
   InputHeaderContainer: {
-    display:'flex',
+    display: 'flex',
     marginHorizontal: SPACING.space_32,
     marginTop: SPACING.space_28,
-    marginBottom:SPACING.space_28-SPACING.space_12,
+    marginBottom: SPACING.space_28 - SPACING.space_12,
   },
-  centerContainer:{
-    alignItems:'center',
-  }
+  centerContainer: {
+    alignItems: 'center',
+  },
 });
