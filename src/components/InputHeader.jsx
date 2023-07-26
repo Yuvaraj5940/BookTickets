@@ -44,7 +44,7 @@ export default InputHeader;
 const styles = StyleSheet.create({
   InputBox: {
     display: 'flex',
-    paddingVertical: SPACING.space_8,
+    paddingVertical: SPACING.space_2,
     paddingHorizontal: SPACING.space_24,
     borderWidth: 2,
     borderColor: COLORS.WhiteRGBA15,
