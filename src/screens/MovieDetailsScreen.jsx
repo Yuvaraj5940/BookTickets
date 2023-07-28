@@ -47,7 +47,6 @@ const genres = {
 };
 
 const getMovieDetails = async movieid => {
-  console.log(MOviecastDetails(movieid));
   try {
     let res = await fetch(MovieId(movieid));
     let newres = await res.json();
@@ -200,7 +199,7 @@ const MovieDetailsScreen = ({navigation, route}) => {
           onPress={() => {
             navigation.push('SeatBooking', {
               bgImage: BaseIamgepath('w780', movieData.backdrop_path),
-              posterImage: BaseIamgepath('original', movieCastData.poster_path),
+              posterImage: BaseIamgepath('original', movieData.poster_path),
             });
           }}>
           <Text style={styles.btnText}>Select Seats</Text>

@@ -24,8 +24,8 @@ const AppHeaxder = props => {
 export default AppHeaxder;
 const styles = StyleSheet.create({
   conatiner: {
-    display: 'flex',
-    flex: 1,
+    // display: 'flex',
+    // flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
