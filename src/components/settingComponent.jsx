@@ -38,7 +38,7 @@ const styles = StyleSheet.create({
   title: {
     color: COLORS.White,
     fontFamily: FONTFAMILY.poppins_regular,
-    fontSize: FONTSIZE.size_18,
+    fontSize: FONTSIZE.size_16,
   },
   subTitle: {
     color: COLORS.WhiteRGBA32,

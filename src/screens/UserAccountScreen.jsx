@@ -1,12 +1,6 @@
 import {View, Text, StyleSheet, Image} from 'react-native';
 import React from 'react';
-import {
-  BORDERRADIUS,
-  COLORS,
-  FONTFAMILY,
-  FONTSIZE,
-  SPACING,
-} from '../theme/Theme';
+import {COLORS, FONTFAMILY, FONTSIZE, SPACING} from '../theme/Theme';
 import AppHeaxder from '../components/AppHeaxder';
 import SettingComponent from '../components/settingComponent';
 
@@ -73,8 +67,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     paddingVertical: SPACING.space_20,
     paddingHorizontal: SPACING.space_10,
-
-    // padding: SPACING.space_36,
   },
   prfileText: {
     color: COLORS.White,

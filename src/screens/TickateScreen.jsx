@@ -151,7 +151,6 @@ const styles = StyleSheet.create({
   },
   tikateContainer: {
     flex: 1,
-    // justifyContent: 'center',
     zIndex: -1,
   },
   imgBg: {
@@ -208,13 +207,6 @@ const styles = StyleSheet.create({
   seatContainer: {
     alignItems: 'center',
   },
-  // tickateSeat: {
-  //   flexDirection: 'row',
-  //   gap: SPACING.space_36,
-  //   alignItems: 'center',
-  //   justifyContent: 'center',
-  //   marginVertical: SPACING.space_10,
-  // },
   seattitle: {
     fontFamily: FONTFAMILY.poppins_medium,
     fontSize: FONTSIZE.size_18,

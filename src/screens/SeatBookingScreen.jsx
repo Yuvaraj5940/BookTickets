@@ -1,5 +1,6 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {
+  Animated,
   FlatList,
   ImageBackground,
   ScrollView,
@@ -74,7 +75,6 @@ const SeatBookingScreen = ({navigation, route}) => {
   const [selecetedseatArray, setselecetedseatArray] = useState([]);
   const [selectTimeIndex, setSelectTimeIndex] = useState([]);
 
-  // generateDate();
   console.log(twoDSeatArry);
   const selectedSeat = (index, subindex, num) => {
     if (!twoDSeatArry[index][subindex].taken) {
@@ -87,7 +87,7 @@ const SeatBookingScreen = ({navigation, route}) => {
       } else {
         const tempindex = array.indexOf(num);
         if (tempindex > -1) {
-          array.slice(tempindex, 1);
+          array.splice(tempindex, 1);
           setselecetedseatArray(array);
         }
       }
@@ -131,7 +131,6 @@ const SeatBookingScreen = ({navigation, route}) => {
   };
   return (
     <ScrollView
-      // contentContainerStyle={styles.scrollviveContainer}
       bounces={false}
       showsVerticalScrollIndicator={false}
       style={styles.container}>
@@ -145,13 +144,15 @@ const SeatBookingScreen = ({navigation, route}) => {
             <View style={styles.appHeaderCont}>
               <AppHeaxder
                 name="close"
-                header={'Movie details'}
+                header={''}
                 action={() => navigation.goBack()}
               />
             </View>
           </LinearGradient>
         </ImageBackground>
-        <Text style={styles.ScreenText}>This side Screen</Text>
+        <View style={styles.screenview}>
+          <Text style={styles.ScreenText}>This side Screen</Text>
+        </View>
       </View>
       <View style={styles.seatContainetr}>
         <View style={styles.conatinerGap20}>
@@ -263,7 +264,7 @@ const SeatBookingScreen = ({navigation, route}) => {
       <View style={styles.btnContainer}>
         <View style={styles.priceCnt}>
           <Text style={styles.pricetitle}>Total Price</Text>
-          <Text style={styles.priceText}>${price}.00</Text>
+          <Text style={styles.priceText}> &#8377; {price}.00</Text>
         </View>
         <TouchableOpacity onPress={() => Bookseat()}>
           <Text style={styles.btnText}>Buy Tickats</Text>
@@ -302,7 +303,7 @@ const styles = StyleSheet.create({
     marginVertical: SPACING.space_20,
   },
   conatinerGap20: {
-    gap: SPACING.space_18,
+    gap: SPACING.space_15,
   },
   seatRow: {
     flexDirection: 'row',
@@ -389,7 +390,6 @@ const styles = StyleSheet.create({
     fontSize: FONTSIZE.size_12,
   },
   priceText: {
-    fontFamily: FONTFAMILY.poppins_medium,
     color: COLORS.White,
     fontSize: FONTSIZE.size_20,
   },
@@ -401,5 +401,13 @@ const styles = StyleSheet.create({
     borderRadius: BORDERRADIUS.radius_20,
     fontWeight: 'bold',
     fontSize: FONTSIZE.size_16,
+  },
+  screenview: {
+    width: '80%',
+    height: 20,
+    backgroundColor: COLORS.WhiteRGBA15,
+    alignSelf: 'center',
+    justifyContent: 'center',
+    borderRadius: 10,
   },
 });
