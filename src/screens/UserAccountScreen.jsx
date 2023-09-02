@@ -1,10 +1,20 @@
-import {View, Text, StyleSheet, Image} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Image,
+  TouchableOpacity,
+  Linking,
+} from 'react-native';
 import React from 'react';
 import {COLORS, FONTFAMILY, FONTSIZE, SPACING} from '../theme/Theme';
 import AppHeaxder from '../components/AppHeaxder';
 import SettingComponent from '../components/settingComponent';
 
 const UserAccountScreen = ({navigation, route}) => {
+  function OpenWebsite(ur) {
+    Linking.openURL(ur);
+  }
   return (
     <View style={styles.container}>
       <View style={styles.appHeaderCont}>
@@ -23,6 +33,12 @@ const UserAccountScreen = ({navigation, route}) => {
         />
         <Text style={styles.prfileText}>name</Text>
       </View>
+      <TouchableOpacity
+        onPress={() =>
+          OpenWebsite('https://in.bookmyshow.com/explore/home/bengaluru')
+        }>
+        <Text style={styles.linking}>Go to reality</Text>
+      </TouchableOpacity>
       <View style={styles.profileCont}>
         <SettingComponent
           icon="user"
@@ -78,5 +94,13 @@ const styles = StyleSheet.create({
     height: 100,
     width: 100,
     borderRadius: 50,
+  },
+  linking: {
+    color: '#FFBF00',
+    padding: 5,
+    backgroundColor: COLORS.WhiteRGBA50,
+    textAlign: 'center',
+    borderRadius: 10,
+    marginHorizontal: 50,
   },
 });

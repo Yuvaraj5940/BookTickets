@@ -61,5 +61,6 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: SPACING.space_10,
+  
   },
 });

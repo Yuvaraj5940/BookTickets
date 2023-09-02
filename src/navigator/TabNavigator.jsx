@@ -20,7 +20,7 @@ const TabNavigator = () => {
         tabBarStyle: {
           backgroundColor: COLORS.Black,
           borderTopWidth: 0,
-          height: 80
+          height: 80,
         },
       }}>
       <Tab.Screen

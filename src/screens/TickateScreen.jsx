@@ -22,6 +22,8 @@ import CustomIcons from '../components/CustomIcons';
 const TickateScreen = ({navigation, route}) => {
   const [tickateData, setTickateData] = useState(route.params);
   console.log(tickateData);
+  // let n=EncryptedStorage.getItem('ticket');
+  // console.log(JSON.parse(n));
 
   useEffect(() => {
     (async () => {

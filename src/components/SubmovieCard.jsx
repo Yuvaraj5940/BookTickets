@@ -10,7 +10,7 @@ import {
 
 const SubmovieCard = props => {
   return (
-    <TouchableOpacity onPress={() =>  props.cardFunction()}>
+    <TouchableOpacity onPress={() => props.cardFunction()}>
       <View
         style={[
           styles.container,
